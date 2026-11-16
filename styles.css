@@ -1,0 +1,109 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: #f2f4f7;
+  color: #1d2733;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  background: #1f3a5f;
+  color: #fff;
+}
+
+header h1 { font-size: 1.25rem; margin: 0; }
+
+.badge {
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.badge.online  { background: #2e9d5b; }
+.badge.offline { background: #c0392b; }
+
+main {
+  max-width: 760px;
+  margin: 1.5rem auto;
+  padding: 0 1rem;
+  display: grid;
+  gap: 1.25rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.25rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 { margin: 0 0 1rem; font-size: 1.1rem; }
+
+form { display: grid; gap: 0.75rem; }
+
+input, textarea {
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid #c9d1db;
+  border-radius: 6px;
+  font: inherit;
+}
+textarea { min-height: 90px; resize: vertical; }
+
+button {
+  padding: 0.65rem 1rem;
+  border: 0;
+  border-radius: 6px;
+  background: #1f3a5f;
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+button:hover { background: #2b4f80; }
+
+#btn-purgar { background: #6b7785; }
+#btn-purgar:hover { background: #55606c; }
+
+.header-lista {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.header-lista h2 { margin: 0; }
+
+#lista-outbox { list-style: none; margin: 0; padding: 0; }
+
+#lista-outbox li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid #edf0f3;
+}
+#lista-outbox li:last-child { border-bottom: 0; }
+
+.item-titulo { font-weight: 600; }
+.item-hora { font-size: 0.8rem; color: #6b7785; }
+
+.estado {
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.estado.pendiente    { background: #fff1d6; color: #9a6400; }
+.estado.sincronizado { background: #dcf3e5; color: #1e7a45; }
+
+.vacio { color: #6b7785; font-style: italic; }
